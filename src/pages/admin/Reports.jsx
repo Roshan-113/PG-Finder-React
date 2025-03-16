@@ -3,7 +3,7 @@ import { TrendingUp, Download, Calendar, BarChart3 } from 'lucide-react';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 
-// Improved reporting system with analytics - Day 3
+// Improved reporting system with analytics - Day 3// Improved reporting system with analytics - Day 3
 export function Reports() {
   return (
     <div className="min-h-screen bg-gray-50">
