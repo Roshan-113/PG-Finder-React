@@ -1,237 +1,169 @@
-# PG Finder - JSP Web Application
+# 🏠 PGConnect  
+### Location-Based PG & Roommate Discovery Platform
 
-A complete PG (Paying Guest) accommodation finder and roommate matching platform built with Java, JSP, and Servlets.
-
-## 🎯 Features
-
-- **PG Listings**: Browse and search verified PG accommodations
-- **Roommate Finder**: Find compatible roommates with matching algorithm
-- **Booking System**: Complete booking flow with payment integration
-- **Review System**: Rate and review PG accommodations
-- **Multi-Role Support**: Tenant, Owner, and Admin dashboards
-- **Messaging**: Real-time communication between users
-- **Responsive Design**: Works seamlessly on all devices
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Java JDK 8 or higher
-- Apache Tomcat 9.0 or higher
-- Eclipse IDE (recommended)
-
-### Installation
-
-1. **Clone or Download** the project
-
-2. **Import into Eclipse**
-   ```
-   File → Import → Existing Projects into Workspace
-   Select the project folder
-   ```
-
-3. **Configure Tomcat Server**
-   ```
-   Window → Preferences → Server → Runtime Environments
-   Add → Apache Tomcat v9.0
-   ```
-
-4. **Deploy and Run**
-   ```
-   Right-click project → Run As → Run on Server
-   Select Tomcat v9.0
-   ```
-
-5. **Access the Application**
-   ```
-   Landing Page: http://localhost:8080/PG-Finder/
-   Login: http://localhost:8080/PG-Finder/pages/auth/login.jsp
-   Admin: http://localhost:8080/PG-Finder/pages/auth/admin-login.jsp
-   ```
-
-## 📁 Project Structure
-
-```
-PG-Finder-JSP/
-├── WebContent/
-│   ├── WEB-INF/
-│   │   └── web.xml                 # Servlet configuration
-│   ├── assets/
-│   │   ├── css/                    # Tailwind-like CSS
-│   │   └── js/                     # JavaScript utilities
-│   ├── components/
-│   │   └── layout/                 # Reusable layouts
-│   └── pages/
-│       ├── public/                 # Public pages
-│       ├── tenant/                 # Tenant dashboard
-│       ├── owner/                  # Owner dashboard
-│       ├── admin/                  # Admin dashboard
-│       └── auth/                   # Authentication pages
-└── src/com/pgfinder/
-    ├── model/                      # Java POJOs
-    ├── dao/                        # Data Access Objects
-    ├── servlet/                    # Servlet controllers
-    ├── util/                       # Utility classes
-    └── data/                       # Mock data
-```
-
-## 🎨 Design
-
-- **Modern UI**: Clean and professional interface
-- **Responsive**: Mobile-first design approach
-- **Color Scheme**: Blue gradient theme
-- **Icons**: SVG icons throughout
-- **Animations**: Smooth transitions and hover effects
-
-## 🔐 User Roles
-
-### Tenant
-- Browse PG listings
-- Find roommates
-- Book accommodations
-- Manage bookings
-- Send messages
-- Write reviews
-
-### Owner
-- Add PG listings
-- Manage properties
-- View inquiries
-- Handle bookings
-- Upload photos
-- Respond to reviews
-
-### Admin
-- Manage users
-- Approve listings
-- Monitor bookings
-- View reports
-- Handle inquiries
-- System settings
-
-## 🛠️ Technology Stack
-
-- **Frontend**: JSP, HTML5, CSS3, JavaScript
-- **Backend**: Java Servlets
-- **Server**: Apache Tomcat 9.0
-- **Architecture**: MVC Pattern
-- **Database**: Mock Data (ready for database integration)
-
-## 📄 Pages Overview
-
-### Public Pages (4)
-- Landing Page
-- PG Listings
-- PG Details
-- Reviews
-
-### Tenant Pages (10)
-- Bookings
-- Saved PGs
-- Roommate Finder
-- Messages
-- Notifications
-- Profile
-- Settings
-- Booking Page
-- Payment Page
-- Booking Confirmation
-
-### Owner Pages (10)
-- Dashboard
-- Manage PG
-- Listings
-- Availability
-- Inquiries
-- Reviews
-- Photos
-- Requests
-- Profile
-- Settings
-
-### Admin Pages (8)
-- Dashboard
-- Users
-- Listings
-- Approvals
-- Reviews
-- Reports
-- Inquiries
-- Settings
-
-### Auth Pages (5)
-- Login
-- Register
-- Forgot Password
-- Change Password
-- Admin Login
-
-## 🔧 Configuration
-
-### web.xml
-All servlets are configured in `WebContent/WEB-INF/web.xml`:
-- PGListingServlet
-- PGDetailsServlet
-- RoommateServlet
-- AuthServlet
-- BookingServlet
-- AdminServlet
-
-### Database Integration
-The project uses mock data. To integrate with a database:
-1. Add JDBC driver to `WEB-INF/lib/`
-2. Update DAO classes with database queries
-3. Configure database connection in a properties file
-
-## 📊 Features in Detail
-
-### Search & Filters
-- Location-based search
-- Price range filter
-- Gender preference
-- Sharing type
-- Amenities filter
-
-### Booking Flow
-1. Browse listings
-2. View details
-3. Fill booking form
-4. Make payment
-5. Confirmation
-
-### Roommate Matching
-- Compatibility score
-- Lifestyle preferences
-- Budget matching
-- Location proximity
-
-## 🎯 Future Enhancements
-
-- Database integration (MySQL/PostgreSQL)
-- Real-time chat with WebSocket
-- Payment gateway integration
-- Email notifications
-- SMS alerts
-- Google Maps integration
-- Advanced search with AI
-- Mobile app
-
-## 📝 License
-
-This project is created for educational purposes.
-
-## 👥 Support
-
-For issues or questions, please create an issue in the repository.
-
-## 🎉 Acknowledgments
-
-- Design inspired by modern accommodation platforms
-- Built with Java best practices
-- Follows MVC architecture pattern
+PGConnect is a **location-based web application** designed to help **students and working professionals** find suitable **Paying Guest (PG) accommodations** and **compatible roommates**.  
+The platform also enables **PG owners** to list properties and allows users to share **verified, honest reviews**.
 
 ---
 
-**Version**: 1.0.0  
-**Status**: Production Ready  
-**Last Updated**: 2024
+## 📌 Problem Statement
+
+Finding a suitable PG or compatible roommate is challenging due to:
+
+- ❌ Lack of trusted platforms  
+- ❌ Fake listings and biased reviews  
+- ❌ Difficulty in replacing or switching roommates  
+- ❌ No direct communication with PG owners  
+
+**PGConnect** addresses these issues by offering a **transparent, centralized, and user-friendly platform**.
+
+---
+
+## 🎯 Project Objectives
+
+- 📍 Help users find PGs near colleges or workplaces  
+- 👥 Match users with compatible roommates  
+- 🔁 Enable easy roommate replacement or switching  
+- ⭐ Provide verified and honest PG reviews  
+- 🏢 Connect PG owners directly with tenants  
+
+---
+
+## 🧩 System Users
+
+1. 🎓 Students / Tenants  
+2. 👤 Existing Room Owners / Tenants  
+3. 🏢 PG Owners / Hostel Managers  
+
+---
+
+## ✨ Core Features
+
+### 🏠 PG Search & Discovery
+- Search PGs by city or location  
+- Filter by price, amenities, gender & sharing type  
+- View PG photos and detailed information  
+- Direct contact with PG owners  
+
+---
+
+### 👥 Roommate Finder
+- Post room availability or roommate requirements  
+- Match roommates based on budget, lifestyle & location  
+- Secure private user-to-user communication  
+
+---
+
+### 🔁 Roommate / Room Change
+- Request roommate replacement or switching  
+- Discover nearby compatible roommates  
+
+---
+
+### ⭐ Reviews & Ratings
+- Verified tenant reviews  
+- Ratings for cleanliness, food, safety & owner behavior  
+- Fake review reporting mechanism  
+
+---
+
+### 🏢 PG Owner Panel
+- Add & manage PG listings  
+- Update room availability  
+- Respond to tenant reviews  
+- Receive direct tenant inquiries  
+
+---
+
+## 🏗️ Technology Stack
+
+### 🎨 Frontend
+- React.js  
+- HTML5  
+- CSS3  
+- JavaScript  
+- Bootstrap  
+
+---
+
+### ⚙️ Backend
+- Node.js  
+- Express.js  
+
+---
+
+### 🗄️ Database
+- MySQL / MongoDB  
+
+---
+
+### 🔧 Other Tools & Services
+- Google Maps API / Leaflet  
+- JWT / Firebase Authentication  
+- Git & GitHub  
+
+---
+
+## 🗂️ Database Design (High-Level)
+
+- **Users**  
+- **PG_Listings**  
+- **Rooms / Roommate_Posts**  
+- **Reviews**  
+- **Connections / Contacts**  
+
+---
+
+## 🔄 Application Workflow
+
+1. User registers & selects role  
+2. Searches for PG or roommates  
+3. Applies filters & views results  
+4. Contacts PG owner or roommate  
+5. Moves in or switches roommate  
+6. Submits review after stay  
+
+---
+
+## 🚀 Future Enhancements
+
+- 💬 Real-time in-app chat  
+- 🤖 AI-based roommate compatibility scoring  
+- ✅ PG verification badges  
+- 💳 Online booking & payments  
+- 🚨 Emergency safety features  
+- 🛡️ Fake listing detection  
+
+---
+
+## 📂 Project Status
+
+🚧 **Currently under development**  
+Frontend structure implemented using **React.js**.
+
+---
+
+## 👥 Team Collaboration
+
+This project is developed using **GitHub** with collaborative version control.  
+Team members contribute through **branches, pull requests & code reviews**.
+
+---
+
+## 🎨 UI / UX Design (Figma)
+
+🔗 Figma Design Link:  
+https://www.figma.com/make/KKG4jRj0YImErJGUtkBmZu/PG-Connect-Website-UI-Design
+
+---
+
+## 📜 License
+
+This project is developed **for educational purposes** as a college project.
+
+---
+
+## 📬 Contact
+
+For suggestions, issues, or contributions:  
+Feel free to raise an **Issue** or submit a **Pull Request** ⭐
