@@ -1,0 +1,106 @@
+========================================
+HOW TO MAKE DAILY GITHUB CONTRIBUTIONS
+========================================
+
+CURRENT SITUATION:
+- All your files are already on GitHub
+- To show daily contributions, you need to commit files one by one over many days
+
+STEPS TO FOLLOW DAILY:
+========================================
+
+DAY 1:
+------
+1. Open any file (e.g., src/pages/owner/AddPG.jsx)
+2. Make a small change:
+   - Add a comment: // Updated feature
+   - Fix spacing
+   - Improve code
+3. Save the file
+4. Double-click: git-push-single-file.bat
+5. Type: src/pages/owner/AddPG.jsx
+6. Press Enter (or type custom message)
+7. Done! ✓
+
+DAY 2:
+------
+1. Open another file (e.g., src/pages/owner/OwnerDashboard.jsx)
+2. Make a small change
+3. Save the file
+4. Double-click: git-push-single-file.bat
+5. Type: src/pages/owner/OwnerDashboard.jsx
+6. Press Enter
+7. Done! ✓
+
+DAY 3:
+------
+Repeat with different file...
+
+========================================
+IMPORTANT NOTES:
+========================================
+
+✓ You MUST make a change to the file before committing
+✓ Commit only ONE file per day
+✓ Each commit will show as a contribution on GitHub
+✓ You have 100+ files, so you can do this for 100+ days!
+
+========================================
+FILE SUGGESTIONS (in order):
+========================================
+
+Owner Pages (14 files):
+- src/pages/owner/AddPG.jsx
+- src/pages/owner/OwnerDashboard.jsx
+- src/pages/owner/Listings.jsx
+- src/pages/owner/ManageRooms.jsx
+- src/pages/owner/ManagePG.jsx
+- src/pages/owner/PGPhotos.jsx
+- src/pages/owner/OwnerProfile.jsx
+- src/pages/owner/OwnerSettings.jsx
+- src/pages/owner/Earnings.jsx
+- src/pages/owner/Inquiries.jsx
+- src/pages/owner/OwnerBookings.jsx
+- src/pages/owner/OwnerRequests.jsx
+- src/pages/owner/OwnerReviews.jsx
+
+Tenant Pages (14 files):
+- src/pages/tenant/SearchPG.jsx
+- src/pages/tenant/Bookings.jsx
+- src/pages/tenant/SavedPGs.jsx
+- src/pages/tenant/RoommateFinder.jsx
+- src/pages/tenant/Messages.jsx
+- src/pages/tenant/Notifications.jsx
+- src/pages/tenant/TenantProfile.jsx
+- src/pages/tenant/TenantSettings.jsx
+- src/pages/tenant/BookingPage.jsx
+- src/pages/tenant/PaymentPage.jsx
+- src/pages/tenant/BookingConfirmation.jsx
+- src/pages/tenant/RoommateReplacement.jsx
+- src/pages/tenant/Help.jsx
+
+Admin Pages (8 files):
+- src/pages/admin/AdminDashboard.jsx
+- src/pages/admin/Users.jsx
+- src/pages/admin/Listings.jsx
+- src/pages/admin/Approvals.jsx
+- src/pages/admin/Reviews.jsx
+- src/pages/admin/Reports.jsx
+- src/pages/admin/Inquiries.jsx
+- src/pages/admin/Settings.jsx
+
+Components (20+ files):
+- src/components/shared/Header.jsx
+- src/components/pg/PGCard.jsx
+- src/components/roommate/RoommateCard.jsx
+- And many more...
+
+========================================
+QUICK COMMAND:
+========================================
+
+Just run: git-push-single-file.bat
+
+That's it!
+
+========================================
