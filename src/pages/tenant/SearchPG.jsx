@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Search, MapPin, DollarSign, Users, Filter } from 'lucide-react';
 
+// Improved search filters and location-based results - Day 1
 export function SearchPG() {
   const [searchQuery, setSearchQuery] = useState('');
   const [filters, setFilters] = useState({

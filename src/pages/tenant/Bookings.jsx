@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Calendar, MapPin, IndianRupee, Eye, X, Home, Clock, CheckCircle } from 'lucide-react';
 
+// Enhanced booking management with status tracking - Day 1
 export function Bookings() {
   const navigate = useNavigate();
   const [bookings, setBookings] = useState([]);
