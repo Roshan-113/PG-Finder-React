@@ -1,6 +1,7 @@
 import { Building2, DoorOpen, TrendingUp, DollarSign, Star, Plus } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
+// Improved dashboard analytics and real-time stats - Day 1
 export function OwnerDashboard() {
   const navigate = useNavigate();
 

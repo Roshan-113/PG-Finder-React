@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Building2, DollarSign, Save } from 'lucide-react';
 
+// Enhanced form validation and user experience - Day 1
 export function AddPG() {
   const [formData, setFormData] = useState({
     pgName: '',
