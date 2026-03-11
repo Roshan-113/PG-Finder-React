@@ -160,8 +160,8 @@ Upcoming:
 | Enrollment No | Name |
 |---------------|------|
 | 23SOECE11077 | Roshan Sikotariya |
-| 23SOECE11077 | Navaz Odiya |
-| 23SOECE11077 | Harsh Solanki |
+| 23SOECE11062 | Navaz Odiya |
+| 23SOECE11078 | Harsh Solanki |
 
 Institution: **RK University**  
 Course: **Full Stack Development**
