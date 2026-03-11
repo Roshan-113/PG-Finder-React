@@ -1,135 +1,154 @@
 ========================================
-START HERE - 3 PERSON DAILY COMMIT GUIDE
+START HERE - QUICK SETUP GUIDE
 ========================================
 
-REPOSITORY: https://github.com/ros-han113/PG-Finder-React
-
-GOAL: 3 people commit 2 files each daily = 6 files per day
+PROJECT: PG Finder React Application
+TEAM: 3 People Collaboration
+GOAL: Daily commits (2 files per person = 6 files/day)
 
 ========================================
-SETUP (DO THIS ONCE):
+STEP 1: INITIAL SETUP (ONE TIME)
 ========================================
 
-PERSON 1, 2, 3 - Each person does:
-----------------------------------
-1. Clone repository:
-   git clone https://github.com/ros-han113/PG-Finder-React.git
-   cd PG-Finder-React
+PERSON 1 (ros-han113):
+----------------------
+✓ Already done! You own the repository.
+✓ Just use: PERSON-1-ros-han113.bat daily
 
-2. Set your Git identity:
-   git config user.name "Your Name"
-   git config user.email "your-email@example.com"
+PERSON 2 (navaz05):
+-------------------
+1. Go to: https://github.com/ros-han113/PG-Finder-React
+2. Click "Fork" (top right)
+3. Open terminal in your project folder
+4. Run these commands:
+   
+   git remote remove origin
+   git remote add origin https://github.com/navaz05/PG-Finder-React.git
+   git remote add upstream https://github.com/ros-han113/PG-Finder-React.git
+   git push origin main
 
-3. Open TEAM-DAILY-COMMIT-PLAN.txt
-   Find your assigned files (Person 1, 2, or 3)
+5. Use: PERSON-2-navaz05.bat daily
+
+PERSON 3 (harshh-code):
+-----------------------
+1. Go to: https://github.com/ros-han113/PG-Finder-React
+2. Click "Fork" (top right)
+3. Open terminal in your project folder
+4. Run these commands:
+   
+   git remote remove origin
+   git remote add origin https://github.com/harshh-code/PG-Finder-React.git
+   git remote add upstream https://github.com/ros-han113/PG-Finder-React.git
+   git push origin main
+
+5. Use: PERSON-3-harshh-code.bat daily
+
+========================================
+STEP 2: TODAY'S WORK (DAY 1)
+========================================
+
+PERSON 1 (ros-han113):
+----------------------
+Files to edit:
+1. src/pages/owner/AddPG.jsx
+2. src/pages/owner/OwnerDashboard.jsx
+
+What to do:
+- Open both files
+- Add comment: // Enhanced validation - Day 1
+- Save files
+- Run: PERSON-1-ros-han113.bat
+- Enter file paths when asked
+- Enter message: "Enhance owner pages validation - Day 1"
+- Done! ✓
+
+PERSON 2 (navaz05):
+-------------------
+Files to edit:
+1. src/pages/tenant/SearchPG.jsx
+2. src/pages/tenant/Bookings.jsx
+
+What to do:
+- Open both files
+- Add comment: // Improved search functionality - Day 1
+- Save files
+- Run: PERSON-2-navaz05.bat
+- Enter day: 1
+- Enter file paths when asked
+- Enter message: "Improve tenant search and bookings - Day 1"
+- Go to GitHub and create Pull Request
+- Done! ✓
+
+PERSON 3 (harshh-code):
+-----------------------
+Files to edit:
+1. src/pages/admin/AdminDashboard.jsx
+2. src/pages/admin/Users.jsx
+
+What to do:
+- Open both files
+- Add comment: // Enhanced admin controls - Day 1
+- Save files
+- Run: PERSON-3-harshh-code.bat
+- Enter day: 1
+- Enter file paths when asked
+- Enter message: "Enhance admin dashboard and user management - Day 1"
+- Go to GitHub and create Pull Request
+- Done! ✓
+
+========================================
+STEP 3: MERGING PULL REQUESTS
+========================================
+
+PERSON 1 (ros-han113) - Repository Owner:
+------------------------------------------
+After Person 2 and Person 3 create PRs:
+
+1. Go to: https://github.com/ros-han113/PG-Finder-React/pulls
+2. You'll see 2 Pull Requests
+3. Click each PR
+4. Click "Merge Pull Request"
+5. Click "Confirm Merge"
+6. Done! All 3 people get green dots! ✓
 
 ========================================
 DAILY ROUTINE (EVERY DAY):
 ========================================
 
-STEP 1: Pull Latest Changes
----------------------------
-git pull origin main
-
-STEP 2: Check Your Assignment
------------------------------
-Open: TEAM-DAILY-COMMIT-PLAN.txt
-Find today's 2 files for your person number
-
-STEP 3: Make Changes to File 1
-------------------------------
-- Open first assigned file
-- Add a comment: // Improved feature
-- Or make small code improvement
-- Save file
-
-STEP 4: Commit File 1
---------------------
-Double-click: git-push-single-file.bat
-Type file path: src/pages/owner/AddPG.jsx
-Type message: Update AddPG page
-Press Enter
-
-STEP 5: Make Changes to File 2
-------------------------------
-- Open second assigned file
-- Add a comment or improvement
-- Save file
-
-STEP 6: Commit File 2
---------------------
-Double-click: git-push-single-file.bat
-Type file path: src/pages/owner/OwnerDashboard.jsx
-Type message: Update Owner Dashboard
-Press Enter
-
-STEP 7: Verify
--------------
-Visit: https://github.com/ros-han113/PG-Finder-React
-Check contribution graph - green dot should appear!
+1. Check TEAM-COLLABORATION-GUIDE.txt for today's files
+2. Each person edits their 2 assigned files
+3. Each person runs their script
+4. Person 2 & 3 create Pull Requests
+5. Person 1 merges the PRs
+6. All 3 get green dots on GitHub! ✓
 
 ========================================
-FILE ASSIGNMENTS:
+FILES YOU NEED:
 ========================================
 
-PERSON 1: Owner Pages + PG Components
-- Days 1-14: 2 files per day
-- See TEAM-DAILY-COMMIT-PLAN.txt for details
-
-PERSON 2: Tenant Pages + Utilities
-- Days 1-14: 2 files per day
-- See TEAM-DAILY-COMMIT-PLAN.txt for details
-
-PERSON 3: Admin Pages + Auth Pages
-- Days 1-14: 2 files per day
-- See TEAM-DAILY-COMMIT-PLAN.txt for details
+✓ TEAM-COLLABORATION-GUIDE.txt - Full guide with file assignments
+✓ PERSON-1-ros-han113.bat - Script for Person 1
+✓ PERSON-2-navaz05.bat - Script for Person 2
+✓ PERSON-3-harshh-code.bat - Script for Person 3
+✓ START-HERE.txt - This file
 
 ========================================
-IMPORTANT RULES:
+IMPORTANT NOTES:
 ========================================
 
-✓ Always pull before starting: git pull origin main
-✓ Each person commits ONLY their assigned files
-✓ Make real changes (add comments, improve code)
-✓ Commit files ONE AT A TIME using git-push-single-file.bat
-✓ Do this EVERY DAY for 14 days
-✓ Result: 84 total commits, all 3 people show contributions
+✓ Commit 2 files per person per day
+✓ Total 6 files committed daily
+✓ Use meaningful commit messages
+✓ Person 1 commits directly
+✓ Person 2 & 3 use Pull Requests
+✓ All 3 will show daily contributions
+✓ Perfect for exam evaluation!
 
 ========================================
-TROUBLESHOOTING:
+NEED HELP?
 ========================================
 
-Error: "File has no changes"
-→ You must edit the file before committing
-
-Error: "Push failed"
-→ Run: git pull origin main
-→ Then try push again
-
-Error: "File not found"
-→ Check file path spelling
-→ Use forward slashes: src/pages/owner/AddPG.jsx
-
-========================================
-QUICK REFERENCE:
-========================================
-
-Pull changes:     git pull origin main
-Commit file:      git-push-single-file.bat
-Check status:     git status
-View commits:     https://github.com/ros-han113/PG-Finder-React/commits/main
-
-========================================
-TIMELINE:
-========================================
-
-Day 1: 6 commits (2 per person)
-Day 2: 6 commits
-Day 3: 6 commits
-...
-Day 14: 6 commits
-
-Total: 84 commits over 14 days
-All 3 people will have green contribution graphs!
+Read: TEAM-COLLABORATION-GUIDE.txt
+It has detailed instructions for everything!
 
 ========================================

@@ -1,0 +1,271 @@
+========================================
+TEAM COLLABORATION GUIDE - PG FINDER
+========================================
+
+PROJECT: PG Finder React Application
+MAIN REPO: https://github.com/ros-han113/PG-Finder-React.git
+
+TEAM MEMBERS:
+========================================
+Person 1 (Owner): ros-han113
+Person 2: navaz05  
+Person 3: harshh-code
+
+GOAL:
+========================================
+- Each person commits 2 files daily
+- Total: 6 files committed per day
+- Show daily green dots on GitHub for all 3 members
+- Proper collaboration with pull requests
+
+INITIAL SETUP (ONE TIME ONLY):
+========================================
+
+PERSON 1 (ros-han113) - Already Done ✓
+- Repository owner
+- Already has all files
+
+PERSON 2 (navaz05) - SETUP:
+1. Go to: https://github.com/ros-han113/PG-Finder-React
+2. Click "Fork" button (top right)
+3. Clone YOUR fork:
+   git clone https://github.com/navaz05/PG-Finder-React.git
+4. Add upstream:
+   git remote add upstream https://github.com/ros-han113/PG-Finder-React.git
+
+PERSON 3 (harshh-code) - SETUP:
+1. Go to: https://github.com/ros-han113/PG-Finder-React
+2. Click "Fork" button (top right)
+3. Clone YOUR fork:
+   git clone https://github.com/harshh-code/PG-Finder-React.git
+4. Add upstream:
+   git remote add upstream https://github.com/ros-han113/PG-Finder-React.git
+
+========================================
+DAILY WORKFLOW (EVERY DAY):
+========================================
+
+PERSON 1 (ros-han113) - DIRECT COMMIT:
+--------------------------------------
+1. Open 2 files from your assigned list
+2. Make small changes (add comments, improve code)
+3. Save files
+4. Run: git add <file1> <file2>
+5. Run: git commit -m "Update <feature> - Day X"
+6. Run: git push origin main
+7. Done! ✓
+
+PERSON 2 (navaz05) - FORK & PULL REQUEST:
+------------------------------------------
+1. Update your fork:
+   git pull upstream main
+   git push origin main
+
+2. Create new branch:
+   git checkout -b navaz-day-X
+
+3. Open 2 files from your assigned list
+4. Make changes and save
+
+5. Commit:
+   git add <file1> <file2>
+   git commit -m "Update <feature> by navaz05 - Day X"
+
+6. Push to YOUR fork:
+   git push origin navaz-day-X
+
+7. Go to GitHub → Your fork → Click "Pull Request"
+8. Create PR to ros-han113/PG-Finder-React
+9. Wait for merge or merge yourself if you have access
+
+PERSON 3 (harshh-code) - FORK & PULL REQUEST:
+----------------------------------------------
+1. Update your fork:
+   git pull upstream main
+   git push origin main
+
+2. Create new branch:
+   git checkout -b harshh-day-X
+
+3. Open 2 files from your assigned list
+4. Make changes and save
+
+5. Commit:
+   git add <file1> <file2>
+   git commit -m "Update <feature> by harshh-code - Day X"
+
+6. Push to YOUR fork:
+   git push origin harshh-day-X
+
+7. Go to GitHub → Your fork → Click "Pull Request"
+8. Create PR to ros-han113/PG-Finder-React
+9. Wait for merge
+
+========================================
+FILE ASSIGNMENT (2 FILES PER PERSON PER DAY):
+========================================
+
+DAY 1 (TODAY):
+--------------
+Person 1 (ros-han113):
+  - src/pages/owner/AddPG.jsx
+  - src/pages/owner/OwnerDashboard.jsx
+
+Person 2 (navaz05):
+  - src/pages/tenant/SearchPG.jsx
+  - src/pages/tenant/Bookings.jsx
+
+Person 3 (harshh-code):
+  - src/pages/admin/AdminDashboard.jsx
+  - src/pages/admin/Users.jsx
+
+DAY 2:
+------
+Person 1 (ros-han113):
+  - src/pages/owner/Listings.jsx
+  - src/pages/owner/ManageRooms.jsx
+
+Person 2 (navaz05):
+  - src/pages/tenant/SavedPGs.jsx
+  - src/pages/tenant/RoommateFinder.jsx
+
+Person 3 (harshh-code):
+  - src/pages/admin/Listings.jsx
+  - src/pages/admin/Approvals.jsx
+
+DAY 3:
+------
+Person 1 (ros-han113):
+  - src/pages/owner/ManagePG.jsx
+  - src/pages/owner/PGPhotos.jsx
+
+Person 2 (navaz05):
+  - src/pages/tenant/Messages.jsx
+  - src/pages/tenant/Notifications.jsx
+
+Person 3 (harshh-code):
+  - src/pages/admin/Reviews.jsx
+  - src/pages/admin/Reports.jsx
+
+DAY 4:
+------
+Person 1 (ros-han113):
+  - src/pages/owner/OwnerProfile.jsx
+  - src/pages/owner/OwnerSettings.jsx
+
+Person 2 (navaz05):
+  - src/pages/tenant/TenantProfile.jsx
+  - src/pages/tenant/TenantSettings.jsx
+
+Person 3 (harshh-code):
+  - src/pages/admin/Inquiries.jsx
+  - src/pages/admin/Settings.jsx
+
+DAY 5:
+------
+Person 1 (ros-han113):
+  - src/pages/owner/Earnings.jsx
+  - src/pages/owner/Inquiries.jsx
+
+Person 2 (navaz05):
+  - src/pages/tenant/BookingPage.jsx
+  - src/pages/tenant/PaymentPage.jsx
+
+Person 3 (harshh-code):
+  - src/components/shared/Header.jsx
+  - src/components/shared/SearchBar.jsx
+
+DAY 6:
+------
+Person 1 (ros-han113):
+  - src/pages/owner/OwnerBookings.jsx
+  - src/pages/owner/OwnerRequests.jsx
+
+Person 2 (navaz05):
+  - src/pages/tenant/BookingConfirmation.jsx
+  - src/pages/tenant/RoommateReplacement.jsx
+
+Person 3 (harshh-code):
+  - src/components/shared/Pagination.jsx
+  - src/components/shared/RatingStars.jsx
+
+DAY 7:
+------
+Person 1 (ros-han113):
+  - src/pages/owner/OwnerReviews.jsx
+  - src/components/layout/OwnerLayout.jsx
+
+Person 2 (navaz05):
+  - src/pages/tenant/Help.jsx
+  - src/components/pg/PGCard.jsx
+
+Person 3 (harshh-code):
+  - src/components/pg/PGFilters.jsx
+  - src/components/pg/PGGallery.jsx
+
+Continue this pattern...
+
+========================================
+COMMIT MESSAGE EXAMPLES:
+========================================
+
+Good Messages:
+✓ "Add booking validation in AddPG page"
+✓ "Improve dashboard UI with new stats"
+✓ "Fix search filter bug in SearchPG"
+✓ "Update tenant profile form validation"
+✓ "Enhance admin user management table"
+
+Bad Messages:
+✗ "update"
+✗ "changes"
+✗ "fix"
+
+========================================
+TYPES OF CHANGES TO MAKE:
+========================================
+
+1. Add comments:
+   // Validate user input before submission
+   
+2. Improve code:
+   - Better variable names
+   - Add error handling
+   - Improve styling
+
+3. Add features:
+   - New validation
+   - Better UI elements
+   - Loading states
+
+4. Fix bugs:
+   - Button visibility
+   - Form validation
+   - Responsive design
+
+========================================
+IMPORTANT NOTES:
+========================================
+
+✓ Each person must make REAL changes (not just spaces)
+✓ Commit 2 files per person per day = 6 files total
+✓ Use meaningful commit messages
+✓ Person 2 & 3 must create Pull Requests
+✓ Person 1 (owner) merges the PRs
+✓ All 3 will get green dots on GitHub
+✓ This shows real collaboration for exam evaluation
+
+========================================
+TROUBLESHOOTING:
+========================================
+
+Q: No green dot showing?
+A: Make sure you committed with correct email configured in Git
+
+Q: Pull request conflicts?
+A: Pull latest changes first: git pull upstream main
+
+Q: Can't push?
+A: Make sure you're pushing to YOUR fork, not main repo
+
+========================================
