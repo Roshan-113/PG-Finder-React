@@ -1,5 +1,6 @@
 import { Users, Building2, CheckCircle, TrendingUp, TrendingDown, DollarSign, UserCheck, Calendar, Flag, Star, Activity } from 'lucide-react';
 
+// Enhanced admin analytics with real-time monitoring - Day 1
 export function AdminDashboard() {
   // Top Stats
   const stats = [

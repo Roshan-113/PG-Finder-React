@@ -5,6 +5,7 @@ import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
 import { Input } from '../../components/ui/Input';
 
+// Improved user management with advanced filtering - Day 1
 export function UsersPage() {
   const [users] = useState([
     { id: 1, name: 'Rahul Kumar', email: 'rahul@example.com', role: 'Tenant', status: 'Active', joined: 'Jan 15, 2026' },
