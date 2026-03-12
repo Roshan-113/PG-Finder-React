@@ -4,7 +4,7 @@ import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
 
-// Simple Listings Management Page
+// Enhanced admin listing management with filters - Day 2
 export function ListingsPage() {
   // Sample listings data
   const [listings] = useState([

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Building2 } from 'lucide-react';
 
+// Improved approval workflow with quick actions - Day 2
 export function Approvals() {
   const [pendingOwners, setPendingOwners] = useState([
     {
