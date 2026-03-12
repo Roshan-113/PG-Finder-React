@@ -7,7 +7,7 @@ import { Input } from '../../components/ui/Input';
 import { Select } from '../../components/ui/Select';
 import { roommateProfiles } from '../../data/mockData';
 
-
+// Improved roommate matching algorithm - Day 2
 
 export function RoommateFinder({ onNavigate }) {
   const [activeTab, setActiveTab] = useState('find');

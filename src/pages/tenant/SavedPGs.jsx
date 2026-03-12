@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Heart, MapPin, Star, IndianRupee, Trash2, Eye, Share2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
+// Enhanced saved PGs with better organization - Day 2
 export function SavedPGs() {
   const navigate = useNavigate();
   const [savedPGs, setSavedPGs] = useState([
