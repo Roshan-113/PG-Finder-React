@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { MessageCircle, Search, Send, MoreVertical, Phone, Video, Paperclip, Smile } from 'lucide-react';
 
+// Enhanced messaging system with real-time updates - Day 3
 export function Messages() {
   const [selectedChat, setSelectedChat] = useState(1);
   const [messageInput, setMessageInput] = useState('');
