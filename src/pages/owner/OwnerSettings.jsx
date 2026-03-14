@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Bell, Lock, ChevronRight, Mail, MessageSquare } from 'lucide-react';
 
+// Improved settings panel with security options - Day 4
 export function OwnerSettings() {
   const navigate = useNavigate();
   const [emailNotifications, setEmailNotifications] = useState(true);

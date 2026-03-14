@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { User, Mail, Phone, MapPin, Building2, Edit2, Save, X } from 'lucide-react';
 
+// Enhanced owner profile with better UI - Day 4
 export function OwnerProfile() {
   const [isEditing, setIsEditing] = useState(false);
   const [profile, setProfile] = useState({
