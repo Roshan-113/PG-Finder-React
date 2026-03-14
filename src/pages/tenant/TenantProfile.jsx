@@ -3,6 +3,7 @@ import { Card } from '../../components/ui/Card';
 import { Input } from '../../components/ui/Input';
 import { Button } from '../../components/ui/Button';
 
+// Enhanced tenant profile management - Day 4
 export function TenantProfile() {
   return (
     <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Bell, Lock, ChevronRight, Mail, MessageSquare } from 'lucide-react';
 
+// Improved tenant preferences settings - Day 4
 export function TenantSettings() {
   const navigate = useNavigate();
   const [emailNotifications, setEmailNotifications] = useState(true);
