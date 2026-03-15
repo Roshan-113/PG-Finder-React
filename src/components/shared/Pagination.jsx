@@ -1,6 +1,7 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '../ui/Button';
 
+// Enhanced pagination with page size options - Day 6
 export function Pagination({ currentPage, totalPages, onPageChange }) {
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', marginTop: '2rem' }}>

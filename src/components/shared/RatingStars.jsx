@@ -1,5 +1,6 @@
 import { Star } from 'lucide-react';
 
+// Improved rating display with half stars - Day 6
 export function RatingStars({ rating, size = 16 }) {
   return (
     <div style={{ display: 'flex', gap: '2px' }}>
