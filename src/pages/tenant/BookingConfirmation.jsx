@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { CheckCircle, Download, Home, Eye, Mail, Phone, MapPin, Calendar, IndianRupee } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
 
+// Enhanced confirmation with receipt download - Day 6
 export function BookingConfirmation() {
   const navigate = useNavigate();
   const location = useLocation();

@@ -4,6 +4,7 @@ import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
 import { ArrowLeft, Home, Users, RefreshCw, CheckCircle, Clock, Bell, MessageCircle } from 'lucide-react';
 
+// Improved roommate replacement matching - Day 6
 export function RoommateReplacement({ onNavigate }) {
   const [step, setStep] = useState(1);
   const [replacementReason, setReplacementReason] = useState('');
