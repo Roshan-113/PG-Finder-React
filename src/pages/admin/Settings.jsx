@@ -4,7 +4,7 @@ import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Input } from '../../components/ui/Input';
 
-// Improved admin settings panel - Day 4
+// Improved admin configuration panel - Day 4// Improved admin settings panel - Day 4
 export function Settings() {
   return (
     <div className="min-h-screen bg-gray-50">
