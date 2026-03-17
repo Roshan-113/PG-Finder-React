@@ -4,7 +4,7 @@ import { Calendar, Home, User, Phone, Mail, Upload, MessageSquare, IndianRupee, 
 import { Button } from '../../components/ui/Button';
 import { Input } from '../../components/ui/Input';
 
-// Enhanced booking flow with better validation - Day 5
+// Enhanced booking flow with better validation - Day 5// Enhanced booking flow with better validation - Day 5
 export function BookingPage() {
   const navigate = useNavigate();
   const location = useLocation();
