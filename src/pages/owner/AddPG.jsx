@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Building2, DollarSign, Save } from 'lucide-react';
+import { Building2, DollarSign, Save, Upload, X } from 'lucide-react';
 
-// Enhanced form validation and user experience - Day 1
+// Enhanced form with image upload and validation
 export function AddPG() {
   const [formData, setFormData] = useState({
     pgName: '',
@@ -11,15 +11,45 @@ export function AddPG() {
     rentPerMonth: '',
     gender: '',
     amenities: [],
-    description: ''
+    description: '',
+    images: []
   });
+
+  const [errors, setErrors] = useState({});
 
   const amenitiesList = ['WiFi', 'AC', 'Laundry', 'Meals', 'Parking', 'Security', 'Gym', 'TV'];
 
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.pgName.trim()) newErrors.pgName = 'PG name is required';
+    if (!formData.location.trim()) newErrors.location = 'Location is required';
+    if (!formData.address.trim()) newErrors.address = 'Address is required';
+    if (!formData.totalRooms || formData.totalRooms < 1) newErrors.totalRooms = 'Valid room count required';
+    if (!formData.rentPerMonth || formData.rentPerMonth < 1000) newErrors.rentPerMonth = 'Valid rent amount required';
+    if (!formData.gender) newErrors.gender = 'Gender preference is required';
+    if (formData.images.length === 0) newErrors.images = 'At least one image is required';
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleImageUpload = (e) => {
+    const files = Array.from(e.target.files);
+    const imageUrls = files.map(file => URL.createObjectURL(file));
+    setFormData({...formData, images: [...formData.images, ...imageUrls]});
+  };
+
+  const removeImage = (index) => {
+    const newImages = formData.images.filter((_, i) => i !== index);
+    setFormData({...formData, images: newImages});
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('PG listing saved successfully!');
+    if (validateForm()) {
+      console.log('Form submitted:', formData);
+      alert('PG listing saved successfully!');
+    }
   };
 
   return (
@@ -144,6 +174,41 @@ export function AddPG() {
                 <span className="text-sm text-gray-700">{amenity}</span>
               </label>
             ))}
+          </div>
+        </div>
+
+        {/* Images Upload */}
+        <div>
+          <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <Upload size={20} className="text-blue-600" />
+            Property Images *
+          </h3>
+          <div className="space-y-4">
+            <input
+              type="file"
+              accept="image/*"
+              multiple
+              onChange={handleImageUpload}
+              className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+            />
+            {errors.images && <p className="text-red-500 text-sm">{errors.images}</p>}
+            
+            {formData.images.length > 0 && (
+              <div className="grid grid-cols-4 gap-4">
+                {formData.images.map((img, index) => (
+                  <div key={index} className="relative group">
+                    <img src={img} alt={`Upload ${index + 1}`} className="w-full h-32 object-cover rounded-lg" />
+                    <button
+                      type="button"
+                      onClick={() => removeImage(index)}
+                      className="absolute top-2 right-2 bg-red-500 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                    >
+                      <X size={16} />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
