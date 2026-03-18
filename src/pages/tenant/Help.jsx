@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Search, MessageCircle, Phone, Mail, HelpCircle, Book, FileText, ChevronRight } from 'lucide-react';
 
+// Enhanced help center with search - Day 6
 export function Help() {
   const [searchQuery, setSearchQuery] = useState('');
 
