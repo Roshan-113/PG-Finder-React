@@ -3,6 +3,7 @@ import { Star, ThumbsUp, MessageCircle } from 'lucide-react';
 import { Card } from '../../components/ui/Card';
 import { Badge } from '../../components/ui/Badge';
 
+// Enhanced review management with responses - Day 6
 export function OwnerReviews() {
   const [reviews] = useState([
     {
