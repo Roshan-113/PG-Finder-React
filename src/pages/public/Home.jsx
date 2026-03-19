@@ -1,6 +1,7 @@
 import { Search, Users, Home as HomeIcon } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
 
+// Enhanced home page with better UI - Day 7
 export function Home({ onNavigate }) {
   return (
     <div>

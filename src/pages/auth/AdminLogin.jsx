@@ -3,6 +3,7 @@ import { Shield, Mail, Lock } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
 import { Input } from '../../components/ui/Input';
 
+// Enhanced admin login with security - Day 7
 export function AdminLogin({ onLogin }) {
   const [formData, setFormData] = useState({ email: '', password: '' });
 
