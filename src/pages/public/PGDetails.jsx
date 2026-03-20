@@ -7,7 +7,7 @@ import { Modal } from '../../components/ui/Modal';
 import { Input } from '../../components/ui/Input';
 import { reviews } from '../../data/mockData';
 
-const WiFi = Wifi;
+// Enhanced PG details with virtual tour - Day 8const WiFi = Wifi;
 const AC = Wind;
 const Food = Utensils;
 const Parking = Car;

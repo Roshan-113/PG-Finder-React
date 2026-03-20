@@ -7,7 +7,7 @@ import { Input } from '../../components/ui/Input';
 import { Select } from '../../components/ui/Select';
 import { reviews } from '../../data/mockData';
 
-export function ReviewsPage() {
+// Enhanced reviews with filtering and sorting - Day 8export function ReviewsPage() {
   const [selectedRating, setSelectedRating] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   
