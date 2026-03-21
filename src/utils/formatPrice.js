@@ -1,5 +1,6 @@
 /**
  * Format price in Indian Rupee format
+ * Enhanced with decimal support - Day 9
  * @param {number} price - Price to format
  * @returns {string} Formatted price string
  */

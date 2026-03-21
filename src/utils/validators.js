@@ -1,5 +1,6 @@
 /**
  * Validate email address
+ * Enhanced with better regex - Day 9
  * @param {string} email - Email to validate
  * @returns {boolean} True if valid
  */

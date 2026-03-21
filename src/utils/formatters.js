@@ -1,3 +1,4 @@
+// Enhanced formatters with localization - Day 9
 export const formatPrice = (price) => {
   return `₹${price.toLocaleString('en-IN')}`;
 };

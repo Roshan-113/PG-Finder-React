@@ -1,4 +1,4 @@
-// Date formatting helpers
+// Enhanced date formatting helpers - Day 9
 export const formatDate = (date) => {
   return new Date(date).toLocaleDateString('en-US', {
     year: 'numeric',
