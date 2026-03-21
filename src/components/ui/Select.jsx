@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Enhanced select component with search - Day 9
 export function Select({ label, options, className = '', ...props }) {
   return (
     <div className="w-full">

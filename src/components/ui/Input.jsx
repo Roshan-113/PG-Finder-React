@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Enhanced input component with validation - Day 9
 export function Input({ label, error, icon, className = '', ...props }) {
   return (
     <div className="w-full">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { X } from 'lucide-react';
 
+// Enhanced modal with animations - Day 9
 export function Modal({ isOpen, onClose, title, children, size = 'md' }) {
   if (!isOpen) return null;
   

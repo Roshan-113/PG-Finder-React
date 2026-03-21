@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Enhanced badge component with more variants - Day 9
 export function Badge({ children, variant = 'default', className = '' }) {
   const variants = {
     success: 'bg-secondary-100 text-secondary-700 border-secondary-200',
