@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 
+// Enhanced notifications hook with auto-dismiss - Day 10
 export function useNotifications() {
   const [notifications, setNotifications] = useState([]);
   

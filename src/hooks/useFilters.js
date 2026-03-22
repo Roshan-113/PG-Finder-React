@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 
+// Enhanced filters hook with persistence - Day 10
 export function useFilters(initialFilters = {}) {
   const [filters, setFilters] = useState(initialFilters);
   
