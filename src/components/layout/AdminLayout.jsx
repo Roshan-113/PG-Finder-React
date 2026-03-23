@@ -5,7 +5,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 
-export function AdminLayout({ children }) {
+// Enhanced admin layout with breadcrumbs - Day 11export function AdminLayout({ children }) {
   const navigate = useNavigate();
   const location = useLocation();
   const { logout } = useAuth();

@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 
+// Enhanced owner layout with quick actions - Day 11
 export function OwnerLayout({ children }) {
   const navigate = useNavigate();
   const location = useLocation();
