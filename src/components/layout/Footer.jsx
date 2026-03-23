@@ -1,5 +1,6 @@
 import { Building2, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
+// Enhanced footer with social links - Day 11
 export function Footer() {
   const companyLinks = ['About Us', 'Careers', 'Press', 'Blog'];
   const supportLinks = ['Help Center', 'Safety Tips', 'FAQs', 'Contact Us'];

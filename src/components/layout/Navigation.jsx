@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { Home, Search, Users, Star, User, Menu, X, Building2 } from 'lucide-react';
 import { Button } from '../ui/Button';
 
+// Enhanced navigation with mobile menu - Day 11
 export function Navigation({ onNavigate }) {
   const navigate = useNavigate();
   const location = useLocation();
