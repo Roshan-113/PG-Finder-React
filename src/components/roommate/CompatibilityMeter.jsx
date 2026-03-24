@@ -1,3 +1,4 @@
+// Enhanced compatibility meter with animations - Day 12
 export function CompatibilityMeter({ score }) {
   const getColor = (score) => {
     if (score >= 80) return '#10b981';

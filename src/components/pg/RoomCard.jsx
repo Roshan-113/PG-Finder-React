@@ -2,6 +2,7 @@ import { Users, Bed } from 'lucide-react';
 import { Card } from '../ui/Card';
 import { Badge } from '../ui/Badge';
 
+// Enhanced room card with availability status - Day 12
 export function RoomCard({ room }) {
   return (
     <Card>
