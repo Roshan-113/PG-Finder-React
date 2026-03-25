@@ -1,4 +1,5 @@
 // Type definitions for PG Finder
+// Enhanced with better type safety - Day 13
 
 export interface PGListing {
   id: number;

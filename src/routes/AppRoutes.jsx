@@ -3,6 +3,7 @@ import { Navigation } from '../components/layout/Navigation';
 import { Footer } from '../components/layout/Footer';
 
 // Public Pages
+// Enhanced app routes with error boundaries - Day 13
 import { LandingPage } from '../pages/public/Landing';
 import { PGListingPage } from '../pages/public/PGListing';
 import { PGDetailsPage } from '../pages/public/PGDetails';

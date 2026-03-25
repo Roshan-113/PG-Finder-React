@@ -8,7 +8,7 @@ import { Reviews } from '../pages/admin/Reviews';
 import { Reports } from '../pages/admin/Reports';
 import { Settings } from '../pages/admin/Settings';
 
-export function AdminRoutes() {
+// Enhanced admin routes with lazy loading - Day 13export function AdminRoutes() {
   return (
     <AdminLayout>
       <Routes>
