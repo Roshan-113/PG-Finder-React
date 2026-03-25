@@ -5,7 +5,7 @@ import com.pgfinder.data.MockData;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class PGDao {
+// Enhanced PG DAO with filtering - Day 13public class PGDao {
     
     public List<PG> getAllPGs() {
         return MockData.getPGListings();

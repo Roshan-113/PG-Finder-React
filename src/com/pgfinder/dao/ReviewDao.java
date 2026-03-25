@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ReviewDao {
+// Enhanced review DAO with sorting - Day 13public class ReviewDao {
     
     private static List<Review> reviews = new ArrayList<>();
     

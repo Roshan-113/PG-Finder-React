@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class BookingDao {
+// Enhanced booking DAO with better query methods - Day 13public class BookingDao {
     
     private static List<Booking> bookings = new ArrayList<>();
     

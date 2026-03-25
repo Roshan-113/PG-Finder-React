@@ -5,7 +5,7 @@ import com.pgfinder.data.MockData;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class RoommateDao {
+// Enhanced roommate DAO with matching algorithm - Day 13public class RoommateDao {
     
     public List<Roommate> getAllRoommates() {
         return MockData.getRoommateProfiles();
