@@ -1,7 +1,7 @@
 import { Building2, Bell, User, Search } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-// Enhanced header with improved navigation - Day 5
+// Enhanced header with real-time notifications - Day 14
 export function Header() {
   const navigate = useNavigate();
 

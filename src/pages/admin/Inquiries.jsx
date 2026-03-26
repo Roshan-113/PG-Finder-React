@@ -4,7 +4,7 @@ import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
 
-// Enhanced inquiry management with tracking - Day 4// Enhanced inquiry management system - Day 4
+// Enhanced inquiry system with auto-responses - Day 14// Enhanced inquiry management with tracking - Day 4// Enhanced inquiry management system - Day 4
 export function InquiriesPage() {
   // Sample inquiries data
   const [inquiries] = useState([
