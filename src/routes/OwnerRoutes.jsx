@@ -3,6 +3,8 @@ import { OwnerLayout } from '../components/layout/OwnerLayout';
 import { OwnerDashboard } from '../pages/owner/OwnerDashboard';
 import { ListingsPage } from '../pages/owner/Listings';
 import { AddPG } from '../pages/owner/AddPG';
+import { EditPG } from '../pages/owner/EditPG';
+import { PGDetails } from '../pages/owner/PGDetails';
 import { ManageRooms } from '../pages/owner/ManageRooms';
 import { Availability } from '../pages/owner/Availability';
 import { OwnerBookings } from '../pages/owner/OwnerBookings';
@@ -21,6 +23,8 @@ export function OwnerRoutes() {
         <Route path="dashboard" element={<OwnerDashboard />} />
         <Route path="listings" element={<ListingsPage />} />
         <Route path="add-pg" element={<AddPG />} />
+        <Route path="edit-pg/:id" element={<EditPG />} />
+        <Route path="pg-details/:id" element={<PGDetails />} />
         <Route path="manage-rooms" element={<ManageRooms />} />
         <Route path="availability" element={<Availability />} />
         <Route path="bookings" element={<OwnerBookings />} />
