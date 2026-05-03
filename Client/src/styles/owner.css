@@ -1,0 +1,453 @@
+/* Owner Module Styles */
+
+/* Owner Dashboard Layout */
+.owner-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Owner Stats */
+.owner-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.owner-stat-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s;
+}
+
+.owner-stat-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Owner Listings */
+.owner-listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.owner-listing-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s;
+}
+
+.owner-listing-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.owner-listing-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.owner-listing-content {
+  padding: 1.5rem;
+}
+
+.owner-listing-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.owner-listing-location {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.owner-listing-details {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.owner-listing-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #3b82f6;
+  margin-bottom: 1rem;
+}
+
+.owner-listing-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Owner Bookings */
+.owner-bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.owner-booking-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.owner-booking-info {
+  flex: 1;
+}
+
+.owner-booking-tenant {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.owner-booking-details {
+  font-size: 0.875rem;
+  color: #6b7280;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.owner-booking-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Owner Inquiries */
+.owner-inquiry-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  margin-bottom: 1rem;
+}
+
+.owner-inquiry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.owner-inquiry-user {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.owner-inquiry-date {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.owner-inquiry-message {
+  font-size: 0.875rem;
+  color: #374151;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.owner-inquiry-response {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.owner-inquiry-response-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+/* Owner Photos */
+.owner-photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.owner-photo-card {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.owner-photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.owner-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.owner-photo-card:hover .owner-photo-overlay {
+  opacity: 1;
+}
+
+.owner-photo-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.owner-photo-btn {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: white;
+  border: none;
+  cursor: pointer;
+  color: #374151;
+  transition: all 0.2s;
+}
+
+.owner-photo-btn:hover {
+  background-color: #f3f4f6;
+}
+
+/* Owner Upload */
+.owner-upload-area {
+  border: 2px dashed #d1d5db;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #f9fafb;
+}
+
+.owner-upload-area:hover {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.owner-upload-icon {
+  font-size: 3rem;
+  color: #9ca3af;
+  margin-bottom: 1rem;
+}
+
+.owner-upload-text {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.owner-upload-hint {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Owner Rooms */
+.owner-rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.owner-room-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.owner-room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.owner-room-number {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.owner-room-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.owner-room-status.available {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.owner-room-status.occupied {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.owner-room-rent {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #3b82f6;
+  margin-bottom: 1rem;
+}
+
+.owner-room-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Owner Earnings */
+.owner-earnings-summary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 1rem;
+  padding: 2rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.owner-earnings-title {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.owner-earnings-amount {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.owner-earnings-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.owner-earnings-detail {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.owner-earnings-detail-label {
+  font-size: 0.875rem;
+  opacity: 0.9;
+  margin-bottom: 0.25rem;
+}
+
+.owner-earnings-detail-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Owner Documents */
+.owner-documents-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.owner-document-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.owner-document-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  background-color: #eff6ff;
+  color: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.owner-document-info {
+  flex: 1;
+}
+
+.owner-document-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.owner-document-meta {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.owner-document-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .owner-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .owner-listings-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .owner-rooms-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .owner-booking-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .owner-earnings-amount {
+    font-size: 2rem;
+  }
+}
