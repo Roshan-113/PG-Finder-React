@@ -1,65 +1,10 @@
-# 🏠 PG Finder - Complete Backend Platform
+# 🏠 PG Finder — Full Stack Platform
 
-A complete, production-ready backend for PG (Paying Guest) accommodation platform with PostgreSQL, Node.js, Express, and integrated payment system.
-
----
-
-## ✨ Features
-
-- ✅ **User Authentication** - JWT-based auth with 3 roles (Admin, Owner, Tenant)
-- ✅ **PG Management** - Complete CRUD for PG listings
-- ✅ **Room Management** - Add, update, delete rooms
-- ✅ **Booking System** - Transaction-based booking with automatic room updates
-- ✅ **Payment Integration** - Razorpay payment gateway integrated
-- ✅ **Review System** - Rating and review with admin approval
-- ✅ **Admin Dashboard** - Complete admin panel with statistics
-- ✅ **Search & Filter** - Advanced search with multiple filters
-- ✅ **Google OAuth Ready** - OAuth credentials configured
+A complete, production-ready **full-stack web application** for PG (Paying Guest) accommodation — built with React, Node.js, Express, and PostgreSQL.
 
 ---
 
-## 🚀 Quick Start
-
-### 1. Create Database
-```bash
-psql -U postgres
-CREATE DATABASE pg_finder;
-\q
-```
-
-### 2. Install & Setup
-```bash
-cd server
-npm install
-```
-
-### 3. Configure Environment
-The `.env` file is already created with:
-- Database: `pg_finder`
-- Razorpay keys (Test mode)
-- Google OAuth credentials
-
-**Just update your PostgreSQL password:**
-```bash
-# Edit server/.env
-DB_PASSWORD=your_postgres_password
-```
-
-### 4. Seed Database
-```bash
-npm run seed
-```
-
-### 5. Start Server
-```bash
-npm run dev
-```
-
-Server runs on: **http://localhost:5000**
-
----
-
-## 🔑 Login Credentials
+## 🖥️ Live Demo Credentials
 
 | Role | Email | Password |
 |------|-------|----------|
@@ -69,35 +14,172 @@ Server runs on: **http://localhost:5000**
 
 ---
 
-## 💳 Payment Integration
+## ✨ Features
 
-### Razorpay Test Keys (Already Configured)
-- **Key ID**: `rzp_test_SVIqxh9e1lGkPp`
-- **Secret**: `d79dG0NPUuTIdOGxoS4f32VS`
-
-### Test Payment
-- **Test Card**: 4111 1111 1111 1111
-- **Expiry**: Any future date
-- **CVV**: Any 3 digits
-
-### Payment Flow
-1. Create booking → `POST /api/bookings`
-2. Create Razorpay order → `POST /api/payments/create-order`
-3. Complete payment on Razorpay checkout
-4. Verify payment → `POST /api/payments/verify`
+- ✅ **3-Role Authentication** — Admin, Owner, Tenant with JWT
+- ✅ **PG Management** — Complete CRUD for PG listings
+- ✅ **Room Management** — Add, update, delete rooms per PG
+- ✅ **Booking System** — Transaction-based booking with automatic room updates
+- ✅ **Razorpay Payments** — Integrated payment gateway with order verification
+- ✅ **Review System** — Rating & review with admin moderation
+- ✅ **Admin Dashboard** — Stats, charts, user management, approvals
+- ✅ **Owner Dashboard** — Listings, bookings, earnings, inquiries
+- ✅ **Tenant Dashboard** — Search PGs, bookings, saved PGs, roommate finder
+- ✅ **Advanced Search & Filter** — City, price, type, amenities
+- ✅ **Google OAuth Ready** — OAuth credentials configured
+- ✅ **Responsive UI** — Works on all screen sizes
 
 ---
 
-## 🔐 Google OAuth (Configured)
+## 📦 Tech Stack
 
-Credentials are ready in `.env`:
-- **Client ID**: `your_google_client_id`
-- **Client Secret**: `your_google_client_secret`
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React 19, React Router DOM v7, Vite |
+| Backend | Node.js, Express.js |
+| Database | PostgreSQL 14+ |
+| ORM | Sequelize |
+| Authentication | JWT + bcryptjs |
+| Payment | Razorpay |
+| Security | Helmet, CORS, Rate Limiting |
+| Dev Tools | Nodemon, dotenv |
 
-To implement:
-```bash
-npm install passport passport-google-oauth20
+---
+
+## 📁 Project Structure
+
 ```
+PG-Finder/
+├── Client/                        # React Frontend (Vite)
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── admin/             # Dashboard, Users, Approvals, Reviews
+│   │   │   ├── owner/             # Dashboard, AddPG, Bookings, Earnings
+│   │   │   ├── tenant/            # Dashboard, SearchPG, Bookings, SavedPGs
+│   │   │   ├── public/            # Landing, FindPG, PGDetails, Roommate
+│   │   │   └── auth/              # Login, Register, ForgotPassword
+│   │   ├── components/
+│   │   │   ├── layouts/           # AdminLayout, OwnerLayout, TenantLayout
+│   │   │   └── ui/                # Button, Input, Modal, Card, Table...
+│   │   ├── hooks/
+│   │   │   └── useFormValidation.js  # Custom validation hook
+│   │   ├── services/
+│   │   │   └── api.js             # Centralized API service layer
+│   │   └── styles/                # Role-based CSS files
+│   └── package.json
+│
+└── Server/                        # Node.js + Express Backend
+    ├── src/
+    │   ├── config/
+    │   │   └── database.js        # PostgreSQL connection
+    │   ├── models/                # 7 Sequelize models
+    │   │   ├── User.js
+    │   │   ├── PG.js
+    │   │   ├── Room.js
+    │   │   ├── Booking.js
+    │   │   ├── Payment.js
+    │   │   ├── Review.js
+    │   │   └── Inquiry.js
+    │   ├── controllers/           # Business logic
+    │   ├── routes/                # API route definitions
+    │   ├── middleware/            # Auth, role-check, error handling
+    │   └── seeders/               # Sample data
+    ├── .env
+    ├── package.json
+    └── server.js                  # Entry point
+```
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js v18+
+- PostgreSQL 14+
+
+### 1. Clone & Install
+
+```bash
+# Install frontend dependencies
+cd Client
+npm install
+
+# Install backend dependencies
+cd ../Server
+npm install
+```
+
+### 2. Create Database
+
+```bash
+psql -U postgres
+CREATE DATABASE pg_finder;
+\q
+```
+
+### 3. Configure Environment
+
+```bash
+# Edit Server/.env
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=pg_finder
+DB_USER=postgres
+DB_PASSWORD=your_postgres_password
+JWT_SECRET=your_jwt_secret
+PORT=5000
+```
+
+### 4. Seed Database
+
+```bash
+cd Server
+npm run seed
+```
+
+### 5. Start Backend
+
+```bash
+cd Server
+npm run dev
+# Runs on http://localhost:5000
+```
+
+### 6. Start Frontend
+
+```bash
+cd Client
+npm run dev
+# Runs on http://localhost:5173
+```
+
+---
+
+## 🗄️ Database Schema
+
+### Tables
+
+| Table | Description |
+|-------|-------------|
+| `users` | User accounts — admin, owner, tenant |
+| `pgs` | PG property listings |
+| `rooms` | Rooms within each PG |
+| `bookings` | Booking records with status |
+| `payments` | Razorpay payment transactions |
+| `reviews` | Tenant reviews with admin approval |
+| `inquiries` | Tenant-to-owner inquiries |
+
+### Relationships
+```
+User (owner)  →  has many PGs
+PG            →  has many Rooms, Bookings, Reviews, Inquiries
+User (tenant) →  has many Bookings
+Booking       →  has one Payment
+```
+
+### Sample Data
+- 5 Users (1 admin, 2 owners, 2 tenants)
+- 4 PG properties · 8 Rooms · 2 Bookings · 2 Payments · 2 Reviews
 
 ---
 
@@ -105,63 +187,101 @@ npm install passport passport-google-oauth20
 
 ### Authentication
 ```
-POST   /api/auth/register       - Register user
-POST   /api/auth/login          - Login user
-GET    /api/auth/me             - Get current user
-PUT    /api/auth/profile        - Update profile
-PUT    /api/auth/change-password - Change password
+POST   /api/auth/register          Register user
+POST   /api/auth/login             Login user
+GET    /api/auth/me                Get current user
+PUT    /api/auth/profile           Update profile
+PUT    /api/auth/change-password   Change password
 ```
 
-### PG Management
+### PG Listings
 ```
-GET    /api/pgs                 - Get all PGs (with filters)
-GET    /api/pgs/:id             - Get PG details
-POST   /api/pgs                 - Create PG (owner)
-PUT    /api/pgs/:id             - Update PG (owner)
-DELETE /api/pgs/:id             - Delete PG (owner)
-GET    /api/pgs/owner/my-pgs    - Get owner's PGs
+GET    /api/pgs                    Get all PGs (with filters)
+GET    /api/pgs/:id                Get PG details
+POST   /api/pgs                    Create PG (owner)
+PUT    /api/pgs/:id                Update PG (owner)
+DELETE /api/pgs/:id                Delete PG (owner)
+GET    /api/pgs/owner/my-pgs       Get owner's PGs
 ```
 
 ### Bookings
 ```
-POST   /api/bookings            - Create booking
-GET    /api/bookings/my-bookings - Get my bookings
-GET    /api/bookings/:id        - Get booking details
-PUT    /api/bookings/:id/cancel - Cancel booking
-GET    /api/bookings/owner/bookings - Owner bookings
+POST   /api/bookings               Create booking
+GET    /api/bookings/my-bookings   Tenant's bookings
+GET    /api/bookings/:id           Booking details
+PUT    /api/bookings/:id/cancel    Cancel booking
+GET    /api/bookings/owner/bookings Owner's bookings
 ```
 
 ### Payments
 ```
-POST   /api/payments/create-order - Create Razorpay order
-POST   /api/payments/verify      - Verify payment
-GET    /api/payments/:bookingId  - Get payment details
+POST   /api/payments/create-order  Create Razorpay order
+POST   /api/payments/verify        Verify payment signature
+GET    /api/payments/:bookingId    Get payment details
 ```
 
 ### Reviews
 ```
-POST   /api/reviews              - Submit review
-GET    /api/reviews/pg/:pgId     - Get PG reviews
-PUT    /api/reviews/:id          - Update review
-DELETE /api/reviews/:id          - Delete review
+POST   /api/reviews                Submit review
+GET    /api/reviews/pg/:pgId       Get PG reviews
+PUT    /api/reviews/:id            Update review
+DELETE /api/reviews/:id            Delete review
 ```
 
 ### Admin
 ```
-GET    /api/admin/dashboard      - Dashboard stats
-GET    /api/admin/users          - Get all users
-GET    /api/admin/pgs/pending    - Pending PGs
-PUT    /api/admin/pgs/:id/approve - Approve PG
-PUT    /api/admin/pgs/:id/reject  - Reject PG
-GET    /api/admin/reviews/pending - Pending reviews
-PUT    /api/admin/reviews/:id/approve - Approve review
+GET    /api/admin/dashboard              Dashboard stats
+GET    /api/admin/users                  All users
+DELETE /api/admin/users/:id             Delete user
+PUT    /api/admin/users/:id/toggle-status Toggle user status
+GET    /api/admin/pgs/pending            Pending PGs
+PUT    /api/admin/pgs/:id/approve        Approve PG
+PUT    /api/admin/pgs/:id/reject         Reject PG
+GET    /api/admin/reviews/pending        Pending reviews
+PUT    /api/admin/reviews/:id/approve    Approve review
 ```
+
+---
+
+## 💳 Payment Integration (Razorpay)
+
+### Test Keys (Already Configured)
+- **Key ID**: `rzp_test_SVIqxh9e1lGkPp`
+- **Secret**: `d79dG0NPUuTIdOGxoS4f32VS`
+
+### Test Card
+```
+Card Number : 4111 1111 1111 1111
+Expiry      : Any future date
+CVV         : Any 3 digits
+```
+
+### Payment Flow
+```
+1. Tenant creates booking     →  POST /api/bookings
+2. Backend creates order      →  POST /api/payments/create-order
+3. Razorpay checkout opens    →  User pays with test card
+4. Backend verifies signature →  POST /api/payments/verify
+5. Booking confirmed          →  Status updated in DB
+```
+
+---
+
+## 🔒 Security
+
+- ✅ JWT authentication (7-day expiry)
+- ✅ Password hashing with bcrypt (salt rounds: 10)
+- ✅ Role-based route authorization (admin / owner / tenant)
+- ✅ SQL injection prevention via Sequelize parameterized queries
+- ✅ Rate limiting — 100 requests / 15 min per IP
+- ✅ Security headers via Helmet
+- ✅ CORS — only frontend origin allowed
+- ✅ Input validation with express-validator
 
 ---
 
 ## 🧪 Test APIs
 
-### Using cURL
 ```bash
 # Get all PGs
 curl http://localhost:5000/api/pgs
@@ -172,165 +292,38 @@ curl -X POST http://localhost:5000/api/auth/login \
   -d '{"email":"tenant1@example.com","password":"Tenant@123"}'
 ```
 
-### Using Postman
-1. Import endpoints from documentation
-2. Set Authorization header: `Bearer YOUR_TOKEN`
-3. Test all endpoints
-
----
-
-## 📁 Project Structure
-
-```
-server/
-├── src/
-│   ├── config/
-│   │   └── database.js          # PostgreSQL connection
-│   ├── models/                  # 7 database models
-│   │   ├── User.js
-│   │   ├── PG.js
-│   │   ├── Room.js
-│   │   ├── Booking.js
-│   │   ├── Payment.js
-│   │   ├── Review.js
-│   │   └── Inquiry.js
-│   ├── controllers/             # Business logic
-│   │   ├── authController.js
-│   │   ├── pgController.js
-│   │   ├── bookingController.js
-│   │   ├── paymentController.js  # Razorpay integration
-│   │   └── ...
-│   ├── routes/                  # API routes
-│   ├── middleware/              # Auth & error handling
-│   └── seeders/                 # Sample data
-├── .env                         # Environment (configured)
-├── package.json
-└── server.js                    # Entry point
-```
-
----
-
-## 🗄️ Database Schema
-
-### Tables
-- **users** - User accounts with roles
-- **pgs** - PG property listings
-- **rooms** - Rooms in PGs
-- **bookings** - Booking records
-- **payments** - Payment transactions
-- **reviews** - User reviews
-- **inquiries** - User inquiries
-
-### Sample Data Included
-- 5 Users (1 admin, 2 owners, 2 tenants)
-- 4 PG properties
-- 8 Rooms
-- 2 Bookings
-- 2 Payments
-- 2 Reviews
-
----
-
-## 🔒 Security Features
-
-- ✅ JWT authentication
-- ✅ Password hashing (bcrypt)
-- ✅ Role-based authorization
-- ✅ SQL injection prevention
-- ✅ Rate limiting
-- ✅ Security headers (Helmet)
-- ✅ CORS protection
-- ✅ Input validation
-
----
-
-## 📖 Documentation
-
-- **Quick Setup**: `SETUP_INSTRUCTIONS.md`
-- **Complete Guide**: `BACKEND_SETUP_GUIDE.md`
-- **Frontend Integration**: `FRONTEND_BACKEND_INTEGRATION.md`
-- **API Documentation**: `server/README.md`
-- **Database Comparison**: `DATABASE_COMPARISON_RECOMMENDATION.md`
+Or use **Postman** — set `Authorization: Bearer YOUR_TOKEN` header.
 
 ---
 
 ## 🐛 Troubleshooting
 
-### Database Connection Failed
+**Database connection failed**
 ```bash
-# Check PostgreSQL is running
-# Verify credentials in server/.env
+# Verify PostgreSQL is running and check Server/.env
 DB_PASSWORD=your_actual_password
 ```
 
-### Port Already in Use
+**Port already in use**
 ```bash
-# Change port in server/.env
+# Change in Server/.env
 PORT=5001
 ```
 
-### Razorpay Test Mode
-- Use test card: 4111 1111 1111 1111
-- Any future expiry date
-- Any CVV
+**Frontend not connecting to backend**
+```bash
+# Check Client/.env
+VITE_API_URL=http://localhost:5000/api
+```
 
 ---
 
-## 🎯 What's Configured
+## 🔐 Google OAuth
 
-✅ Database: `pg_finder`
-✅ Project: `pg-finder`
-✅ Razorpay: Test keys configured
-✅ Google OAuth: Credentials ready
-✅ JWT: Authentication ready
-✅ Sample Data: Seeded
-✅ Payment: Integrated
-✅ 40+ API endpoints
-
----
-
-## 🔄 Next Steps
-
-1. ✅ Backend running
-2. ✅ Database seeded
-3. ✅ APIs working
-4. 🔄 Test with Postman
-5. 🔄 Connect frontend
-6. 🔄 Test payment flow
-7. 🔄 Deploy to production
-
----
-
-## 📦 Tech Stack
-
-- **Runtime**: Node.js v18+
-- **Framework**: Express.js
-- **Database**: PostgreSQL 14+
-- **ORM**: Sequelize
-- **Authentication**: JWT + bcrypt
-- **Payment**: Razorpay
-- **Security**: Helmet, CORS, Rate Limiting
-
----
-
-## 🚀 Deployment Ready
-
-The backend is production-ready with:
-- Environment configuration
-- Error handling
-- Security middleware
-- Transaction support
-- Payment integration
-- Complete documentation
-
----
-
-## 📞 Support
-
-Check documentation files:
-- `SETUP_INSTRUCTIONS.md` - Quick setup
-- `BACKEND_SETUP_GUIDE.md` - Complete guide
-- `FRONTEND_BACKEND_INTEGRATION.md` - Frontend connection
+Credentials ready in `.env`. To activate:
+```bash
+npm install passport passport-google-oauth20
+```
 
 ---
 
@@ -340,6 +333,4 @@ MIT License
 
 ---
 
-**🎉 Your PG Finder backend is ready! Start building amazing features! 🚀**
-
-**Made with ❤️ using Node.js, Express, PostgreSQL, and Razorpay**
+**Made with ❤️ using React, Node.js, Express, PostgreSQL, and Razorpay**
