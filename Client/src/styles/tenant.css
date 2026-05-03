@@ -1,0 +1,460 @@
+/* Tenant Module Styles */
+
+/* Tenant Dashboard Layout */
+.tenant-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Tenant Header */
+.tenant-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem 0;
+}
+
+.tenant-header-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.tenant-welcome {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.tenant-subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Tenant Search */
+.tenant-search-section {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: -2rem auto 2rem;
+  max-width: 1280px;
+}
+
+.tenant-search-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  align-items: end;
+}
+
+.tenant-search-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tenant-search-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.tenant-search-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.tenant-search-btn {
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tenant-search-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tenant PG Cards */
+.tenant-pg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.tenant-pg-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.tenant-pg-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.tenant-pg-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tenant-pg-content {
+  padding: 1.5rem;
+}
+
+.tenant-pg-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 0.5rem;
+}
+
+.tenant-pg-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.tenant-pg-save-btn {
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  font-size: 1.25rem;
+  transition: all 0.2s;
+}
+
+.tenant-pg-save-btn:hover {
+  color: #ef4444;
+}
+
+.tenant-pg-save-btn.saved {
+  color: #ef4444;
+}
+
+.tenant-pg-location {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tenant-pg-features {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.tenant-pg-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.tenant-pg-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.tenant-pg-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+.tenant-pg-price-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.tenant-pg-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  color: #f59e0b;
+}
+
+/* Tenant Bookings */
+.tenant-bookings-list {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.tenant-booking-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.tenant-booking-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 0.75rem;
+  object-fit: cover;
+}
+
+.tenant-booking-info {
+  flex: 1;
+}
+
+.tenant-booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.tenant-booking-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.tenant-booking-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.tenant-booking-status.confirmed {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.tenant-booking-status.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.tenant-booking-status.cancelled {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.tenant-booking-details {
+  font-size: 0.875rem;
+  color: #6b7280;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tenant-booking-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Tenant Profile */
+.tenant-profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.tenant-profile-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.tenant-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tenant-profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.tenant-profile-info {
+  flex: 1;
+}
+
+.tenant-profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.tenant-profile-email {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+/* Tenant Messages */
+.tenant-messages-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1.5rem;
+  height: calc(100vh - 4rem);
+}
+
+.tenant-messages-list {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  overflow-y: auto;
+}
+
+.tenant-message-item {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tenant-message-item:hover {
+  background-color: #f9fafb;
+}
+
+.tenant-message-item.active {
+  background-color: #eff6ff;
+}
+
+.tenant-message-sender {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.tenant-message-preview {
+  font-size: 0.875rem;
+  color: #6b7280;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tenant-messages-chat {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+.tenant-messages-chat-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tenant-messages-chat-body {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.tenant-messages-chat-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.tenant-message-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tenant-message-input input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+}
+
+/* Tenant Saved PGs */
+.tenant-saved-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tenant-search-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .tenant-pg-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tenant-booking-card {
+    flex-direction: column;
+  }
+  
+  .tenant-booking-image {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .tenant-messages-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .tenant-messages-list {
+    display: none;
+  }
+  
+  .tenant-profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
