@@ -80,6 +80,7 @@ app.use('/api/saved-pgs',     require('./src/routes/savedpg'));
 app.use('/api/inquiries',     require('./src/routes/inquiry'));
 app.use('/api/profile',       require('./src/routes/profile'));
 app.use('/api/roommates',     require('./src/routes/roommate'));
+app.use('/api/owner',         require('./src/routes/owner'));
 
 // 404
 app.use((req, res) => {
