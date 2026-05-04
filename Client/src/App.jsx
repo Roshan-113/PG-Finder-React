@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -30,7 +30,7 @@ function GoogleAuthSuccess({ setUser }) {
     } else {
       navigate('/login', { replace: true });
     }
-  }, []);
+  }, [navigate, setUser]);
   return <div style={{ padding: '4rem', textAlign: 'center' }}>Signing you in with Google...</div>;
 }
 
